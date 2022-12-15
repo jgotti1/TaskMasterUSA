@@ -18,7 +18,7 @@
 
 //+++++++++++++++++++CYCLIC PROD BACKEND PATHS ++++++++++++++++++++
 
-export const signupAdminFetchPath = "https://sore-gray-moth-ring.cyclic.app/signup";
+export const signupAdminFetchPath = "https://sore-gray-moth-ring.cyclic.app/organizations/signup";
 export const signupFetchPath = "https://sore-gray-moth-ring.cyclic.app/user/signup/";
 export const taskFetchPath = "https://sore-gray-moth-ring.cyclic.app/tasks/";
 export const loginFetchPath = "https://sore-gray-moth-ring.cyclic.app/user/login";

@@ -216,9 +216,9 @@ const AdminDashboard = () => {
         const dueDateFormatted = format(dueDate, "MM/dd/yyyy");
         const today = Date.now();
         const todayFormatted = format(today, "MM/dd/yyyy");
-        // console.log(`current date ${currentDate}`);
-        // console.log(`good date ${goodDate}`);
-        // console.log(`dueDateFormatted ${dueDateFormatted}`);
+        console.log(`current date ${currentDate}`);
+        console.log(`good date ${goodDate}`);
+        console.log(`dueDateFormatted ${dueDateFormatted}`);
 
         if (dueDateFormatted < todayFormatted && task.isComplete === "NO") {
           overdue.push(task);
