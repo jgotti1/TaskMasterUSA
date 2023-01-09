@@ -219,9 +219,13 @@ const AdminDashboard = () => {
         console.log(`current date ${currentDate}`);
         console.log(`good date ${goodDate}`);
         console.log(`dueDateFormatted ${dueDateFormatted}`);
+        console.log(`todayFormatted ${todayFormatted}`);
+        console.log(Date.now())
 
-        if (dueDateFormatted < todayFormatted && task.isComplete === "NO") {
-          overdue.push(task);
+        // if (task.due_date < Date.now() && task.isComplete === "NO") {
+        //   overdue.push(task);
+          if (dueDate < today && task.isComplete === "NO") {
+            overdue.push(task);
         } else if (dueDateFormatted >= todayFormatted && task.isComplete === "NO") {
           inProgress.push(task);
         } else if (task.isComplete === "YES") {
