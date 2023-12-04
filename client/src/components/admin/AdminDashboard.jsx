@@ -211,16 +211,18 @@ const AdminDashboard = () => {
 
       for (const task of tasks) {
         let currentDate = task.due_date;
-        let goodDate = currentDate.replace("-", "/");
+        // let goodDate = currentDate.replace("-", "/");
+        // fix osx mobile
+         let goodDate = currentDate.replace(/-/g, "/");
         const dueDate = new Date(goodDate);
         const dueDateFormatted = format(dueDate, "MM/dd/yyyy");
         const today = Date.now();
         const todayFormatted = format(today, "MM/dd/yyyy");
-        console.log(`current date ${currentDate}`);
-        console.log(`good date ${goodDate}`);
-        console.log(`dueDateFormatted ${dueDateFormatted}`);
-        console.log(`todayFormatted ${todayFormatted}`);
-        console.log(Date.now())
+        // console.log(`current date ${currentDate}`);
+        // console.log(`good date ${goodDate}`);
+        // console.log(`dueDateFormatted ${dueDateFormatted}`);
+        // console.log(`todayFormatted ${todayFormatted}`);
+        // console.log(Date.now())
 
         // if (task.due_date < Date.now() && task.isComplete === "NO") {
         //   overdue.push(task);
@@ -315,7 +317,9 @@ const AdminDashboard = () => {
           <Tbody>
             {rowData.map((task) => {
               let currentDate = task.due_date;
-              let goodDate = currentDate.replace("-", "/");
+              // let goodDate = currentDate.replace("-", "/");
+                // fix osx mobile
+              let goodDate = currentDate.replace(/-/g, "/");
               const dueDate = new Date(goodDate);
               const dueDateFormatted = format(dueDate, "MM/dd/yyyy");
 

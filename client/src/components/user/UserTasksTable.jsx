@@ -239,7 +239,9 @@ const UserTasksTable = () => {
         <Tbody>
           {rowData.map((row) => {
             let currentDate = row.due_date;
-            let goodDate = currentDate.replace("-", "/");
+            // let goodDate = currentDate.replace("-", "/");
+            // OSX MobileFix 
+            let goodDate = currentDate.replace(/-/g, "/");
             const date = new Date(goodDate);
             const dueDateFormatted = format(date, "MM/dd/yyyy");
           
